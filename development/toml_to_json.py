@@ -48,6 +48,6 @@ for root, dirs, files in os.walk("detections/"):
                         data += "  " + "\"" + field + "\": " + str(alert['rule'][field]).replace("'","\"") + "," + "\n"
                     
             data += "  \"enabled\": true\n}"
-            print(data)
-        #elastic_data = requests.post(url, headers=headers, data=data).json()
-        #print(elastic_data)
+           
+        elastic_data = requests.post(url, headers=headers, data=data).json()
+       
