@@ -1,0 +1,20 @@
+# Template using only the required fields.
+
+[rule]
+
+description = """
+
+"""
+
+name = ""
+risk_score = 47
+severity = "medium"
+type = "eql"
+
+query = '''
+
+'''
+language = "eql"
+#if type = "threshold"
+# threshold = <something>
+
