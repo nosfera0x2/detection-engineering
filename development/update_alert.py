@@ -3,7 +3,7 @@ import os
 import tomllib
 
 url = "https://nosfera0x2.kb.us-central1.gcp.cloud.es.io:9243/api/detection_engine/rules"
-api_key = "UWR6YjVJa0JVcmcyUXZuQms5eDM6SllpYTAxS2hRLTZtZllkNXdaNVhiQQ=="
+api_key = os.environ["API_KEY"]
 
 headers = {
     'Content-Type': 'application/json;charset=UTF-8',
@@ -14,7 +14,7 @@ headers = {
 changed_files = os.environ["CHANGED_FILES"]
 
 data = ""
-for root, dirs, files in os.walk("C:\\Users\\Spencer.Brown\\OneDrive - Sophos Ltd\\Documents\\spenProjects\\Python\\Detection_Engineering\\converted_detections"):
+for root, dirs, files in os.walk("detections/"):
     for file in files:
         if file in changed_files:
             data = "{\n"

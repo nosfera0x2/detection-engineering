@@ -8,7 +8,7 @@ import os
 #with open(file, "rb") as toml:
 #    alert = tomllib.load(toml)
 
-for root, dirs, files in os.walk('C:\\Users\\Spencer.Brown\\OneDrive - Sophos Ltd\\Documents\\spenProjects\\Python\\Detection_Engineering\\converted_detections'):
+for root, dirs, files in os.walk("detections/"):
     for file in files:
         if file.endswith(".toml"):
             full_path = os.path.join(root, file)
