@@ -1,0 +1,6 @@
+# Ignore elastic-api directory
+/elastic-api/
+
+# Ignore TOML direcotry
+/TOML/
+

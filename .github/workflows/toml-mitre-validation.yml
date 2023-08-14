@@ -10,7 +10,8 @@ jobs:
   toml-mitre-validation:
     
     runs-on: ubuntu-latest
-
+    env:
+      API_KEY: ${{ secrets.ELASTIC_KEY }}
     steps:
       
       - uses: actions/checkout@v3

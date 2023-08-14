@@ -3,8 +3,8 @@ import os
 import tomllib
 
 url = "https://nosfera0x2.kb.us-central1.gcp.cloud.es.io:9243/api/detection_engine/rules"
-api_key = os.environ["API_KEY"]
-#UWR6YjVJa0JVcmcyUXZuQms5eDM6SllpYTAxS2hRLTZtZllkNXdaNVhiQQ==
+api_key = os.environ["ELASTIC_KEY"]
+
 headers = {
     'Content-Type': 'application/json;charset=UTF-8',
     'kbn-xsrf': 'true',
