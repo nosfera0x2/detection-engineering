@@ -1,4 +1,4 @@
-name: All Detections To Elastic
+name: Update Detections
 
 on:
   push:
