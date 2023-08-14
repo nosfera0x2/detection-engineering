@@ -4,7 +4,6 @@ import tomllib
 
 url = "https://nosfera0x2.kb.us-central1.gcp.cloud.es.io:9243/api/detection_engine/rules"
 api_key = os.environ['ELASTIC_KEY']
-
 headers = {
     'Content-Type': 'application/json;charset=UTF-8',
     'kbn-xsrf': 'true',
@@ -48,7 +47,7 @@ for root, dirs, files in os.walk("detections/"):
                         data += "  " + "\"" + field + "\": " + str(alert['rule'][field]).replace("'","\"") + "," + "\n"
                     
             data += "  \"enabled\": true\n}"
-           
+
         elastic_data = requests.post(url, headers=headers, data=data).json()
         print(elastic_data)
        
